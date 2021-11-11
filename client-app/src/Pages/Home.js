@@ -4,12 +4,13 @@ import Pagination from '../components/Pagination/Pagination';
 import './style.css'
 
 
+
 function Home() {
   const [search,setSearch] = useState('');
   const [userInfo, setUserInfo] = useState([]);
   const[currentPage, setCurrentPage] = useState(1);
   const[userInfoInPages,setUserInfoInPages] = useState(10);
-  const[detail,setDetail] = useState([]);
+  const[changeWord, setChangeWord] = useState('');
 
 
 
@@ -31,12 +32,7 @@ const updateSearch = e => {
   setSearch(e.target.value); 
 };
 
-const loaddetailPage = (data) =>{
-    console.log(data);
-    setDetail(data);
 
-
-}
 
 const indexOfLastUserInfo =  currentPage * userInfoInPages;
 const indexOfFirstUserInfo = indexOfLastUserInfo-userInfoInPages;
@@ -54,21 +50,22 @@ const currentUserInfo = userInfo.slice(indexOfFirstUserInfo,indexOfLastUserInfo)
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            flexDirection:'column',
+            flexDirection:'column'
+            
             
         }}>
-            <p className='f2 white'>
+            <p className='f2 yellow'>
                 {'Surf the Github Repo, It will use Github api to surf people Repo!!!'}
             </p>
-            <div style={{
-            display: 'flex'
-        }} className=" form center shadow-5 br3 pa3">
+            <div  className=" form center shadow-5 br3 pa3 mv2 ">
+           
                   
-        <input className='f4 pa2  w-100 ' type="text "  onChange={updateSearch} placeholder="search name"/>
+        <input className='f4  w-100 ' type="text "  onChange={updateSearch} placeholder="search name"/>
        
 
 
             </div>
+          
 
         </div>
 

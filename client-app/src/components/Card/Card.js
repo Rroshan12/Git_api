@@ -6,6 +6,7 @@ import './style.css'
 
 function Card({info}) {
     const[detail,setDetail] = useState([]);
+   
 
     const handelClick = async (ata) => {
       
@@ -39,6 +40,7 @@ function Card({info}) {
             <div class ="dt w-100 mt1">
             <div class ="dtc">
             <a href={info.html_url}><h1 class ="f5 f4-ns mv0 grow dim" >{info.login}</h1></a>
+            
             
             </div>
            
