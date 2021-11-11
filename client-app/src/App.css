@@ -1,5 +1,7 @@
 .App{
   display: flex;
-  padding:15px;
   flex-wrap: wrap;
+}
+input{
+  text-align: center;
 }
