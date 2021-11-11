@@ -2,7 +2,19 @@
     overflow-y: scroll;
     width:300px;
     height:350px;
-    scrollbar-color: white rgb(179, 46, 46);
+    overflow-x: hidden;
+   
   
    
+}
+
+::-webkit-scrollbar{
+    width:3px;
+    background-color:blueviolet;
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 20px;
+
+
 }
