@@ -10,7 +10,7 @@ const app = express();
 const port = 5000
 //api keys are defined
 const uri = `https://api.github.com`;
-const access_token = "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";
+const access_token = "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";
 
 const config = {
     headers: {Authorization: `Bearer ${access_token}`}     

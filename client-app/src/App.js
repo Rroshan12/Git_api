@@ -8,6 +8,10 @@ function App() {
   const [search,setSearch] = useState('');
   const [userInfo, setUserInfo] = useState([]);
 
+  const[loading,setLoding] = useState(false);
+  const[currentPage, setCurrentPage] = useState(1);
+  const[userInfoInPages,setUserInfoInPages] = useState(10);
+
 
 
 
@@ -28,6 +32,11 @@ function App() {
 const updateSearch = e => {
   setSearch(e.target.value); 
 };
+
+const indexOfLastUserInfo =  currentPage * userInfoInPages;
+const indexOfFirstUserInfo = indexOfLastUserInfo-userInfoInPages;
+const currentUserInfo = userInfo.slice(indexOfFirstUserInfo,indexOfLastUserInfo);
+
 
 
 
@@ -61,7 +70,7 @@ const updateSearch = e => {
 
       <div class="App">
         {
-          userInfo.filter((val)=>{
+          currentUserInfo.filter((val)=>{
             if(search==" ")
             {
               return val;
@@ -84,7 +93,7 @@ const updateSearch = e => {
       
       </div>
 
-      <Pagination />
+      <Pagination  currentPage={currentPage} setCurrentPage={setCurrentPage}/>
 
      
     </>
