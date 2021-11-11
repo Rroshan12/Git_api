@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Card from './components/Card/Card'
+import Pagination from './components/Pagination/Pagination';
 
 
 function App() {
@@ -80,9 +81,14 @@ const updateSearch = e => {
         
 
 
-
+      
       </div>
+
+      <Pagination />
+
+     
     </>
+
   )
 }
 
