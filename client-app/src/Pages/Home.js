@@ -48,7 +48,7 @@ const currentUserInfo = userInfo.slice(indexOfFirstUserInfo,indexOfLastUserInfo)
 
 
   return (
-    <>
+    <div id="container">
 
         <div style={{
             display: 'flex',
@@ -96,15 +96,15 @@ const currentUserInfo = userInfo.slice(indexOfFirstUserInfo,indexOfLastUserInfo)
 
           ))
         }
-        <Pagination   currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+       
+      </div>
+      <Pagination   currentPage={currentPage} setCurrentPage={setCurrentPage}/>
 
 
       
-      </div>
-
      
      
-    </>
+    </div>
 
   )
 }

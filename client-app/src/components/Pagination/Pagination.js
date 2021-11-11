@@ -12,7 +12,7 @@ function Pagination({currentPage,setCurrentPage}) {
     return (
         <>
       
-            <div class="tc mw8 center">
+            <div class="tc mw8 center " >
                 <div class="dib overflow-hidden ba br2 b--light-silver">
                     <nav class="cf" data-name="pagination-numbers-bordered">
                         <a class="fl dib link dim black f6 f5-ns b pa3 br b--light-silver" href="#" title="Previous" onClick={()=>setCurrentPage(currentPage-1)}>&larr; Previous</a>
