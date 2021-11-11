@@ -11,6 +11,7 @@ function Pagination({currentPage,setCurrentPage}) {
       };
     return (
         <>
+      
             <div class="tc mw8 center">
                 <div class="dib overflow-hidden ba br2 b--light-silver">
                     <nav class="cf" data-name="pagination-numbers-bordered">
@@ -19,8 +20,8 @@ function Pagination({currentPage,setCurrentPage}) {
 
                         <div class="overflow-hidden center dt tc">
                             <a class={!active? 'dtc link dim white   f6 f5-ns b pa3 br b--light-silver':"dtc link dim white bg-blue  f6 f5-ns b pa3 br b--light-silver"} href="#" title="1" onClick={()=>handelClick(1)}>1</a>
-                            <a class={!active? '':"dtc link dim black   bg-blue      f6 f5-ns b pa3 br b--light-silver" }href="#" title="2" onClick={()=>handelClick(2)}>2</a>
-                            <a  class={!active? '':"dtc link dim black  bg-blue        f6 f5-ns b pa3 br b--light-silver"} href="#" title="3" onClick={()=>handelClick(3)}>3</a>
+                            <a class={!active? 'dtc link dim white   f6 f5-ns b pa3 br b--light-silver':"dtc link dim white   bg-blue      f6 f5-ns b pa3 br b--light-silver" }href="#" title="2" onClick={()=>handelClick(2)}>2</a>
+                            <a  class={!active? 'dtc link dim white   f6 f5-ns b pa3 br b--light-silver':"dtc link dim white  bg-blue        f6 f5-ns b pa3 br b--light-silver"} href="#" title="3" onClick={()=>handelClick(3)}>3</a>
                             
                         </div>
                     </nav>

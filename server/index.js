@@ -26,6 +26,7 @@ app.route("/getUserInfo").get(function(req,res) {
         axios.get(uri+'/users', null, config).then((responses) => {
 
            const  repos = responses.data;
+          
         
            res.status(200).json(repos);
         
@@ -41,12 +42,15 @@ app.route("/getUserInfo").get(function(req,res) {
 
 })
 
-app.route("/getUserInfo").get(function(req,res) {
-    const {query} = req.params;
+app.route("/getDetail").post(function(req,res) {
+    const {username} = req.body;
+ 
+ 
     try {
-        axios.get(uri+'/search/users?q={query}{&page,per_page,sort,order}', null, config).then((responses) => {
+        axios.get(uri+'/users/'+username+'/repos', null, config).then((responses) => {
 
            const  repos = responses.data;
+           console.log(repos)
         
            res.status(200).json(repos);
         
@@ -61,6 +65,7 @@ app.route("/getUserInfo").get(function(req,res) {
 
 
 })
+
 
 
   
