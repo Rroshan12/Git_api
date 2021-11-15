@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState ,useRef} from 'react'
 import { Link } from 'react-router-dom';
 import Detail from '../Detail/Detail';
 import './style.css'
 
 
+
+
 function Card({info}) {
     const[detail,setDetail] = useState([]);
+
    
 
     const handelClick = async (ata) => {
@@ -22,6 +25,11 @@ function Card({info}) {
           const data = await response.json();
 
           setDetail(data);
+
+          
+
+
+
           
          
 
@@ -34,7 +42,7 @@ function Card({info}) {
         <>
        
         
-        <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center " id="scrolli">
+        <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center animate-scroll "  id="scrolli">
             <img src={`${info.avatar_url}`} class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing."/>
             <div class ="pa2 ph3-ns pb3-ns">
             <div class ="dt w-100 mt1">
@@ -59,8 +67,11 @@ function Card({info}) {
            
             </p></a>
             {detail.map(userdetail =>(
+                <div  >
+                     <Detail   key={userdetail.id} userdetail={userdetail} />
+                    </div>
                 
-                 <Detail key={userdetail.id} userdetail={userdetail} />
+                
 
 
             ))
